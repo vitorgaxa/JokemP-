@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokemPô</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>JokemPô</h1>
+
+        <div class="buttons">
+            <button value="rock" onclick="playerChoice(rock)" id="rock">&#x1F44A</button>
+            <button value="paper" onclick="playerChoice(paper)" id="paper">&#x1F590</button>
+            <button value="scissor" onclick="playerChoice(scissor)" id="scissor">&#x270c</button>
+        </div>
+
+        <p class="aichoice">Escolha do bot</p>
+        <p class="result"></p>
+
+        <p class="points">Sua pontuação: <span class="your-points">0</span></p>
+        <p class="points">Pontuação da IA: <span class="ai-points">0</span></p>
+
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
