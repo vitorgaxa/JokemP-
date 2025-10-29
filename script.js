@@ -14,7 +14,7 @@ function playerChoice(choice) {
 const aiAnswer = document.querySelector('.aichoice')
 
 function aiChoiceGenerator(yourChoice) {
-    const aiPossibilities = [ROCK, PAPER, SCISSOR];
+    const aiPossibilities = [GAME_OPTIONS.ROCK, GAME_OPTIONS.PAPER, GAME_OPTIONS.SCISSOR];
     const aiChoice = aiPossibilities[Math.floor(Math.random() * aiPossibilities.length)]
     aiAnswer.innerHTML = aiChoice
     resultGame(yourChoice, aiChoice)
@@ -24,9 +24,9 @@ function aiChoiceGenerator(yourChoice) {
 const result = document.querySelector('.result')
 
 function resultGame(yourChoice, aiChoice) {
-    if (yourChoice === ROCK && aiChoice === SCISSOR ||
-        yourChoice === PAPER && aiChoice === ROCK||
-        yourChoice === SCISSOR && aiChoice === PAPER) {
+    if (yourChoice === GAME_OPTIONS.ROCK && aiChoice === GAME_OPTIONS.SCISSOR ||
+        yourChoice === GAME_OPTIONS.PAPER && aiChoice === GAME_OPTIONS.ROCK||
+        yourChoice === GAME_OPTIONS.SCISSOR && aiChoice === GAME_OPTIONS.PAPER) {
         result.innerHTML = 'Você ganhou'
         points('victory')
         botton('Você ganhou')
